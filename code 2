@@ -3,7 +3,7 @@
 int main()
 {
 int i,j,k,n,c;
-char alph = 'A';
+int alph = 65;
  
 printf("Input the number of Letters (less than 26) in the Pyramid : ");
 scanf("%d", &n);
@@ -18,7 +18,7 @@ for(i=1;i<=n;i++){
     for(j=2;j<=i;j++){
         printf("%c ",alph--);
     }
-      alph = 'A';
+      alph = 65;
       printf("\n");
    }
 }
