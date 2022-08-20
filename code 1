@@ -1,23 +1,26 @@
-#include <stdio.h>  
-  
-void  main()  
-{  
-    int arr[10]; 
-    int i;  
-       printf("\n\nRead and Print elements of an array:\n");
-       printf("-----------------------------------------\n");	
-  
-    printf("Input 10 elements in the array :\n");  
-    for(i=0; i<10; i++)  
-    {  
-	    printf("element - %d : ",i);
-        scanf("%d", &arr[i]);  
-    }  
-  
-    printf("\nElements in array are: ");  
-    for(i=0; i<10; i++)  
-    {  
-        printf("%d  ", arr[i]);  
-    } 
-    printf("\n");	
+#include <stdio.h>
+
+int main()
+{
+int i,j,k,n;
+char alph = 'A';
+int ctr = 1;
+ 
+printf("Input the number of Letters (less than 26) in the Pyramid : ");
+scanf("%d", &n);
+for(i=1;i<=n;i++){
+	for(k=1;k<=n-i;k++){
+	    printf("  ");
+	}
+    for (j=0;j<=(ctr/2);j++){
+        printf("%c ",alph++);
+    }
+    alph=alph-2;
+    for (j=0;j<(ctr/2);j++){
+        printf("%c ",alph--);
+    }
+      ctr = ctr + 2;
+      alph = 'A';
+      printf("\n");
+   }
 }
